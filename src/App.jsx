@@ -4,13 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import ErrorPage from "./pages/ErrorPage";
 import Dashbaord from "./pages/Dashbaord";
+import MainLayout from "./layouts/MainLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
+      { path: "/", element: <LandingPage /> },
       {
         path: "/dashboard",
         element: <Dashbaord />,
