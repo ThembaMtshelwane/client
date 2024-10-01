@@ -7,22 +7,20 @@ import { Task } from "../definitions";
 type Props = {};
 
 const Dashbaord = (props: Props) => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   useEffect(() => {
     const getTasks = async () => {
-      const data = await getAllTasks();
+      const data: Task[] = await getAllTasks();
       console.log(data);
 
       setTasks(data);
+      setIsLoading(false);
     };
     getTasks();
   }, []);
 
-  const tasksUI = tasks.map((task: Task) => (
-    <li key={task.id}>
-      <TaskItem task={task} />
-    </li>
-  ));
   return (
     <section className="grid grid-rows-[1fr_1fr_5fr] h-[90vh]">
       <h1 className="text-2xl place-self-center">Welcome Username</h1>
@@ -30,7 +28,21 @@ const Dashbaord = (props: Props) => {
         <AddTask />
       </section>
 
-      <ul className="p-2 space-y-3 mx-auto">{tasksUI}</ul>
+      <section className="p-2 mx-auto">
+        {isLoading ? (
+          <h1>Loading</h1>
+        ) : tasks ? (
+          <ul className="space-y-3">
+            {tasks.map((task: Task) => (
+              <li key={task.description}>
+                <TaskItem task={task} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          "No availble tasks, please some"
+        )}
+      </section>
     </section>
   );
 };
