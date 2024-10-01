@@ -1,16 +1,17 @@
 import React from "react";
 import AuthForm from "../AuthFrom";
+import Modal from "./Modal";
 
 type Props = {};
 
 const Login = (props: Props) => {
   const login = async () => {
-    console.log("user signed up");
+    console.log("logged in");
   };
   return (
-    <>
-      <AuthForm handleFormData={login} isSignUp={false} />
-    </>
+    <Modal name={"Login"}>
+      <AuthForm handleFormData={() => {}} />
+    </Modal>
   );
 };
 export default Login;

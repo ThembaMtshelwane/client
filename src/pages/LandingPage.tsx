@@ -1,10 +1,15 @@
 import React from "react";
-import TabComponent from "../components/Tab";
 
 type Props = {};
 
 const LandingPage = (props: Props) => {
-  return <TabComponent />;
+  return (
+    <>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente cum
+      vero, natus voluptates incidunt dignissimos quibusdam qui eligendi libero
+      magnam!
+    </>
+  );
 };
 
 export default LandingPage;

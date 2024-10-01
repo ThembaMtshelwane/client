@@ -1,5 +1,6 @@
 import React from "react";
 import AuthForm from "../AuthFrom";
+import Modal from "./Modal";
 
 type Props = {};
 
@@ -9,7 +10,9 @@ const SignUp = (props: Props) => {
   };
   return (
     <>
-      <AuthForm handleFormData={signUp} isSignUp={true} />
+      <Modal name={"Sign-up"}>
+        <AuthForm handleFormData={() => {}} isSignUp={true} />
+      </Modal>
     </>
   );
 };
