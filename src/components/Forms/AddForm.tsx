@@ -1,10 +1,20 @@
 import React from "react";
+import { addTask } from "../../api/api";
+import { isTask } from "../../utils";
 
 type Props = {};
 
 const AddForm = (props: Props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData) as {
+      [key: string]: FormDataEntryValue;
+    };
+
+    if (isTask(payload)) {
+      addTask(payload);
+    }
   };
 
   return (
@@ -20,6 +30,7 @@ const AddForm = (props: Props) => {
           <textarea
             required
             name="description"
+            id="description"
             placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eum tempora itaque voluptates corrupti aut?"
             className="h-[120px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
           ></textarea>
