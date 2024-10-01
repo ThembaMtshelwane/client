@@ -27,8 +27,7 @@ const AddModal: React.FC = () => {
       {/* Main modal */}
       {isOpen && (
         <div
-          id="authentication-modal"
-          aria-hidden="true"
+          id="add-modal"
           className="fixed inset-0 z-50 flex justify-center items-center w-full h-full bg-black bg-opacity-50"
         >
           <div className="relative p-4 w-full max-w-md max-h-full">

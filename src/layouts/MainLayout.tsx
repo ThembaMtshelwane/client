@@ -6,7 +6,7 @@ type Props = {};
 
 const MainLayout = (props: Props) => {
   return (
-    <div className="bg-primary h-screen text-white font-robotoMono">
+    <div className="bg-primary h-screen text-white font-robotoMono ">
       <Navbar />
       <Outlet />
     </div>
