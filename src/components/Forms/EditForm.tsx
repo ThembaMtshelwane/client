@@ -1,6 +1,5 @@
 import React from "react";
-import { isTask } from "../../utils";
-import { addTask, editTask } from "../../api/api";
+import { editTask } from "../../api/api";
 
 type Props = {
   id: string;
@@ -10,7 +9,6 @@ const EditForm = ({ id }: Props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const payload = Object.fromEntries(formData) as {
       [key: string]: FormDataEntryValue;
