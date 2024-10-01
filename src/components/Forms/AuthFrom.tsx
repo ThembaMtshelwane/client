@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface AuthFormProps {
   isSignUp?: boolean;
@@ -12,9 +13,11 @@ interface FormData {
 }
 
 const AuthForm: React.FC<AuthFormProps> = ({ isSignUp, handleFormData }) => {
+  const navigate = useNavigate();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);
+    navigate("/dashboard");
   };
 
   return (

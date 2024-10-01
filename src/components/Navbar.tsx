@@ -7,7 +7,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const user = true;
+  const user = false;
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
