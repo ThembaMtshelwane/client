@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Login from "./Login";
-import LogOut from "./LogOut";
-import SignUp from "./SignUp";
+import Login from "./Auth/Login";
+import LogOut from "./Auth/LogOut";
+import SignUp from "./Auth/SignUp";
 
 type Props = {};
 

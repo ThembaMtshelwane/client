@@ -1,6 +1,6 @@
 import React from "react";
 import TaskItem from "../components/TaskItem";
-import AddTask from "../components/AddTask";
+import AddTask from "../components/CUD UI/AddTask";
 
 type Props = {};
 

@@ -1,6 +1,6 @@
 import React from "react";
-import DeleteModal from "./DeleteTask";
-import EditTask from "./EditTask";
+import DeleteModal from "./CUD UI/DeleteTask";
+import EditTask from "./CUD UI/EditTask";
 
 type Props = {};
 

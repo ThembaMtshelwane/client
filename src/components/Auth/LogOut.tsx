@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RemoveModal from "./Modals/RemoveModal";
+import RemoveModal from "../Modals/RemoveModal";
 
 const LogOut = () => {
   const logoutUser = () => {
