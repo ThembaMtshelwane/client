@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Task } from "../definitions";
 
 export const getAllTasks = async () => {
   try {
@@ -17,5 +18,14 @@ export const addTask = async (task: { description: string }) => {
     console.log(res.data);
   } catch (error) {
     console.error("Error adding task", error);
+  }
+};
+
+export const editTask = async (task: Task) => {
+  try {
+    const res = await axios.put("http://localhost:9000/api/tasks", task);
+    console.log(res.data);
+  } catch (error) {
+    console.error("Error editing task", error);
   }
 };

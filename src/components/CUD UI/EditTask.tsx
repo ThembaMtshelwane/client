@@ -2,12 +2,14 @@ import React from "react";
 import Modal from "../Modals/Modal";
 import EditForm from "../Forms/EditForm";
 
-type Props = {};
+type Props = {
+  id:string
+};
 
-const EditTask = (props: Props) => {
+const EditTask = ({id}: Props) => {
   return (
     <Modal name={"Edit"}>
-      <EditForm />
+      <EditForm  id={id}/>
     </Modal>
   );
 };

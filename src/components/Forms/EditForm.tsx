@@ -1,10 +1,27 @@
 import React from "react";
+import { isTask } from "../../utils";
+import { addTask, editTask } from "../../api/api";
 
-type Props = {};
+type Props = {
+  id: string;
+};
 
-const EditForm = (props: Props) => {
+const EditForm = ({ id }: Props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData) as {
+      [key: string]: FormDataEntryValue;
+    };
+    const description: string = payload.description as string;
+    const updatedTask = {
+      description,
+      id,
+    };
+
+    editTask(updatedTask);
   };
 
   return (
