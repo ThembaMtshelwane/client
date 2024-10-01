@@ -1,6 +1,6 @@
 import React from "react";
-import EditModal from "./Modals/EditModal";
-import DeleteModal from "./Modals/DeleteModal";
+import DeleteModal from "./DeleteTask";
+import EditTask from "./EditTask";
 
 type Props = {};
 
@@ -11,7 +11,7 @@ const TaskItem = (props: Props) => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit
       </section>
       <section className=" w-fit space-x-4 mt-3 sm:mt-0 flex">
-        <EditModal />
+        <EditTask />
         <DeleteModal />
       </section>
     </div>

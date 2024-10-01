@@ -1,6 +1,6 @@
 import React from "react";
-import AuthForm from "../AuthFrom";
-import Modal from "./Modal";
+import AuthForm from "./Forms/AuthFrom";
+import Modal from "./Modals/Modal";
 
 type Props = {};
 

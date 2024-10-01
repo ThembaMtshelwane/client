@@ -1,6 +1,6 @@
 import React from "react";
 import TaskItem from "../components/TaskItem";
-import AddModal from "../components/Modals/AddModal";
+import AddTask from "../components/AddTask";
 
 type Props = {};
 
@@ -9,7 +9,7 @@ const Dashbaord = (props: Props) => {
     <section className="grid grid-rows-[1fr_1fr_5fr] h-[90vh]">
       <h1 className="text-2xl place-self-center">Welcome Username</h1>
       <section className="place-self-center flex items-center p-2 gap-3">
-        <AddModal />
+        <AddTask />
       </section>
 
       <ul className="p-2 space-y-3 mx-auto">
