@@ -6,7 +6,7 @@ import { Task } from "../definitions";
 
 type Props = {};
 
-const Dashbaord = (props: Props) => {
+const Dashboard = (props: Props) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -47,4 +47,4 @@ const Dashbaord = (props: Props) => {
   );
 };
 
-export default Dashbaord;
+export default Dashboard;
