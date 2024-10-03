@@ -28,7 +28,7 @@ const Dashboard = (props: Props) => {
         <AddTask />
       </section>
 
-      <section className="p-2 mx-auto">
+      <section className="p-2 mx-auto w-[75%]">
         {isLoading ? (
           <h1>Loading</h1>
         ) : tasks ? (

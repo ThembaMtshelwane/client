@@ -7,7 +7,7 @@ type Props = { task: Task };
 
 const TaskItem = ({ task }: Props) => {
   return (
-    <div className="border-2 p-2 sm:flex max-w-[680px]">
+    <div className="border-2 mx-auto p-2 sm:flex max-w-[680px] items-center">
       <section className="sm:w-[70%]">{task.description}</section>
       <section className=" w-fit space-x-4 mt-3 sm:mt-0 flex">
         <EditTask id={task.id} />
