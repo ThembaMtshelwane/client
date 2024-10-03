@@ -30,7 +30,7 @@ const Dashboard = (props: Props) => {
 
       <section className="p-2 mx-auto w-[75%]">
         {isLoading ? (
-          <h1>Loading</h1>
+          <h1 className="text-center">Loading</h1>
         ) : tasks ? (
           <ul className="space-y-3">
             {tasks.map((task: Task) => (
